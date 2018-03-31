@@ -1,11 +1,5 @@
 const fs = require("fs")
-
-// edit the rootDir path （absolute path 絕對路徑 ）
-let rootDir = ''
-// let rootDir = __dirname
-// edit the rootDir path （absolute path 絕對路徑 ）
-
-//
+const rootDir = require('./path.js')
 let fromDir = '/sub/' // <-- 把要 refine的檔案放在此資料夾中
 let toDir = '/EN/'
 let fromDirPath = rootDir + fromDir

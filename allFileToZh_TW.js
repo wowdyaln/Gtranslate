@@ -1,10 +1,6 @@
 const fs = require("fs")
 const translate = require('google-translate-api');
-
-// edit the rootDir path （absolute path 絕對路徑 ）
-let rootDir = ''
-// let rootDir = __dirname
-// edit the rootDir path （absolute path 絕對路徑 ）
+const rootDir = require('./path.js')
 
 let fromDir = '/EN/'
 let toDir = '/TW/'
