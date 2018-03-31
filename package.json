@@ -1,0 +1,14 @@
+{
+  "name": "try",
+  "version": "1.0.0",
+  "description": "- put all files into a document named 'sub'. 把\b要轉換的文字檔 全部放到一個資料夾，並取名爲 'sub'",
+  "main": "allFileToZh_TW.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-translate-api": "^2.3.0"
+  }
+}
