@@ -106,4 +106,4 @@ refinedPaths.delayedForEach((en) => {
   
   fs.writeFileSync(toDirPath + `${en}.cht.txt`, "", 'utf8')
   oneFileToZh_TW(book, toDirPath + `${en}.cht.txt`)
-}, 1000) // request 到 google translate 的間隔時間，可調整
+}, 300) // request 到 google translate 的間隔時間，可調整
