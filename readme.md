@@ -23,3 +23,10 @@
 3. 執行 `node allFileToZh_TW.js`， 英翻中。
 完成後，全部檔案會儲存在 /TW 資料夾中。（如果沒有 /TW 資料夾，會自動建立一個）
 如果沒有去除時間軸的必要，請省略 step2.
+
+## ParentDir / childrenDirs 架構的批次轉換 workflow
+請按照順序執行
+0. `node setDirname.js <THE ParentDir path>`
+1. `node moveFilesToSub.js`
+2. `node refineFilesToEN.js`
+3. `node transFilesToTW.js`

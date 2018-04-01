@@ -1,25 +1,32 @@
-// rootDir > 子資料夾 > ***.en.srt  |全部srt檔案移動到| rootDir > 子資料夾 > sub > ***.en.srt
-// rootDir > ***.en.srt 不會動作
+/*
+      rootDir/parent/sub/name.txt
+refine ==>      
+      rootDir/parent/EN/name_Script.txt
+*/
+
+
 const fs = require("fs")
 const rootDir = require('./path.js')
-
+const refine = require('./refineSub.js')
 const getDirectories = require('./findAllDir.js')
 
-let oldDir = rootDir+'/'
-let newDir = rootDir+'/sub/'
+// console.log(refine.refineSub)
 
-let dirs = getDirectories(rootDir)
-// console.log(dirs)
 
-let subs = []
+//  rootDir/parent/child/name.txt
+let parents = getDirectories(rootDir)
+// console.log(parents)
 
-dirs.forEach( dir => {
-  let files = fs.readdirSync(dir)
-  // console.log(files)
-  files.forEach( name=> { 
-    if (name === "sub"){
-      subs.push(`${dir}/`+name)
+// get subs
+parents.forEach( parent => {
+  let childs = getDirectories(parent)
+  childs.forEach(child => {
+    if (child.match(/sub$/)) {
+      let names = refine.getAllFilePath(child) // txt files under 'sub' field
+
+      names.forEach( name => {
+        refine.refineSub(child+'/'+name, parent+'/EN/', name)
+      })
     }
   })
 })
-console.log(subs)
