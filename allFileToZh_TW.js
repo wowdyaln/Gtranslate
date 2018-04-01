@@ -1,3 +1,12 @@
+/*
+使用前 資料結構：
+rootDir
+    |
+   sub --------------------------------EN
+    |                                   |
+    |                                   |
+aa.en.srt ; bb.en.srt ... ...         aa._Script.txt ; bb_Script.txt ... ...
+*/
 const fs = require("fs")
 const translate = require('google-translate-api');
 const rootDir = require('./path.js')

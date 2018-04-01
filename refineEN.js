@@ -1,3 +1,11 @@
+/*
+使用前 資料結構：
+rootDir
+    |
+   sub
+    |
+aa.en.srt ; bb.en.srt ... ...    
+*/
 const fs = require("fs")
 const rootDir = require('./path.js')
 let fromDir = '/sub/' // <-- 把要 refine的檔案放在此資料夾中
