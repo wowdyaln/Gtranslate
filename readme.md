@@ -27,6 +27,6 @@
 ## ParentDir / childrenDirs 架構的批次轉換 workflow
 請按照順序執行
 0. `node setDirname.js <THE ParentDir path>`
-1. `node moveFilesToSub.js`
+1. `node copyFilesToSub.js`
 2. `node refineFilesToEN.js`
 3. `node transFilesToTW.js`
