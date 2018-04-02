@@ -1,5 +1,3 @@
-en/
-TW/
-EN/
 node_modules/
 *.txt
+lib/path.js

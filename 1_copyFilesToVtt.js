@@ -1,10 +1,8 @@
 // rootDir > 子資料夾 > ***.en.srt  |全部srt檔案移動到| rootDir > 子資料夾 > sub > ***.en.srt
 // rootDir > ***.en.srt 不會動作
 const fs = require("fs")
-const rootDir = require('./path.js')
-// const move = require('./moveFile.js') //move(oldPath, newDir,newFileName, callback)
-
-const getDirectories = require('./findAllDir.js')
+const rootDir = require('./lib/path.js')
+const getDirectories = require('./lib/findAllDir.js')
 
 let oldDir = rootDir+'/'
 let newDir = rootDir+'/sub/'
@@ -18,7 +16,7 @@ dirs.forEach( dir => {
   console.log(dir)
   let names = []
   files.forEach( file => {
-    if (file.match(/en\.srt$/)){
+    if (file.match(/en\.vtt$/)){
       names.push(file)
     }
   })
@@ -29,8 +27,8 @@ dirs.forEach( dir => {
       // console.log(dir+ '/' + name)
       // console.log(dir+ '/')
       // console.log(name)
-      copyFile(dir + '/' + name, dir + '/sub/', name, () => {
-        console.log(`move to ${dir}/sub/`)
+      copyFile(dir + '/' + name, dir + '/vtt/', name, () => {
+        console.log(`move to ${dir}/vtt/`)
       })
     })
   }

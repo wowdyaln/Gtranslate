@@ -12,7 +12,7 @@ const dirname = '${data.toString().trim()}';
 module.exports = dirname;
 `
   
-  fs.writeFileSync('./path.js', rootDir + "\n\n\n", 'utf8')
+  fs.writeFileSync('./lib/path.js', rootDir + "\n\n\n", 'utf8')
 
   console.log("OK, done !!")
   process.exit()

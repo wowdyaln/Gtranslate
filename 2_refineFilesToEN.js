@@ -6,9 +6,9 @@ refine ==>
 
 
 const fs = require("fs")
-const rootDir = require('./path.js')
-const refine = require('./refineSub.js')
-const getDirectories = require('./findAllDir.js')
+const rootDir = require('./lib/path.js')
+const refine = require('./lib/refineSub.js')
+const getDirectories = require('./lib/findAllDir.js')
 
 // console.log(refine.refineSub)
 
