@@ -4,11 +4,16 @@
   "description": "- put all files into a document named 'sub'. 把\b要轉換的文字檔 全部放到一個資料夾，並取名爲 'sub'",
   "main": "allFileToZh_TW.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setPath": "node 0_setDirname",
+    "copyTosub": "node 1_copyFilesTosub",
+    "refineToEN": "node 2_refineFilesToEN",
+    "transToTW": "node 3_transFilesToTW",
+    "start": "run-s setPath copyTosub refineToEN transToTW"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "google-translate-api": "^2.3.0"
+    "google-translate-api": "^2.3.0",
+    "npm-run-all": "^4.1.2"
   }
 }
