@@ -16,7 +16,7 @@
 1. 執行 `node setDirname.js` ， 出現 process.stdin 互動。
 輸入 sub 資料夾的所在路徑
 
-2. 執行 `node refineEN.js` ， 去除時間碼。
+2. 執行 `node refineEN.js` ， 去除時間碼，依照句點位置分段落。
 完成後，全部檔案會儲存在 /EN 資料夾中。（如果沒有 /EN 資料夾，會自動建立一個）
 
 
@@ -25,7 +25,8 @@
 如果沒有去除時間軸的必要，請省略 step2.
 
 ## ParentDir / childrenDirs 架構的批次轉換 workflow
-請按照順序執行
+
+`npm start` 會依序執行以下命令
 
 0. `node 0_setDirname.js`
 1. `node 1_copyFilesToSub.js`
